@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF8"/>
+    <title>San Francisco Food Map</title>
+</head>
+<body>
+    <h1>Welcome to the SF Food Browser!</h1>
+
+    <form action='/results' method='POST'>
+    <p>
+    Sort by: <br/>
+        <input type='radio' name='sort' 
+                value='Rating' checked='checked'/> Ratings <br/>
+        <input type='radio' name='sort' 
+                value='Price' checked= 'checked'/> Price <br/>  
+        <input type='radio' name='sort' 
+            value='ReviewCount'/> Review Count <br/>
+        
+    </p>
+
+    <p>
+    Sort direction: <br/>
+        <input type='radio' name='dir'
+            value='desc' checked='checked'/>High to Low<br/>
+        <input type='radio' name='dir'
+            value='asc'/>Low to High<br/>
+    </p>
+
+    <p>
+        Filter by District: <br/>
+        <select name='district'>
+            <option value='All'>All Districts</option>
+            <option value='North Beach'>North Beach</option>
+            <option value='Nob Hill'>Nob Hill</option>
+            <option value='Marina District'>Marina District</option>
+            <option value='Pacific Heights'>Pacific Heights</option>
+            <option value='Tenderloin'>Tenderloin</option>
+            <option value='SoMa'>SoMa</option>
+            <option value='China Town'>China Town</option>
+            <option value='Financial District'>Financial District</option>
+            <option value='South Beach and Potrero Hill'>South Beach</option>
+            <option value='Mission Bay'>Mission Bay</option>
+            <option value='Bayview District and Hunters Point'>Bayview District</option>
+            <option value='Portola and Visitacion Valley'>Portola and Visitacion Valley</option>
+            <option value='Ingleside and Excelsior District'>Ingleside District</option>
+            <option value='Glen Park'>Glen Park</option>
+            <option value='Noe Valley and Castro'>Castro</option>
+            <option value='Haight Ashbury'>Haight Ashbury</option>
+            <option value='Richimond District'>Richmond</option>
+            <option value='Golden Gate Bridge and Presidio'>Golden Gate Bridge</option>
+            <option value='Sea Cliff and Outer Richmond'>Sea Cliff</option>
+            <option value='Inner Sunset and Sunset District'>Sunset District</option>
+            <option value='Forest Hill and Outer Sunset'>Forest Hill</option>
+            <option value='Park Side and Lake Side'>Park Side</option>
+            <option value='West Portal and St.Francis Wood'>West Portal</option>
+        </select>
+    </p>
+        
+    <p>
+        <input type='checkbox' name='plot'/>Plot results?<br/>
+    </p>
+
+    <input type='submit' value='Get list'/>
+
+    </form>
+
+</body>
+</html>
